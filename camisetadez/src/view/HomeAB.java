@@ -464,6 +464,7 @@ public class HomeAB extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 boolean acesso = FuncoesArquivo.repetidosAB(caminhoListaTimeA, caminhoListaTimeB);
                 int numeroJogadores = caminhoListaTimeA.size() - caminhoListaTimeB.size();
+                //comentario commit
                 if(!ir){
                     JOptionPane.showMessageDialog(null, "Atualize as tabelas!", "Nota", JOptionPane.WARNING_MESSAGE);
                 } else if (caminhoListaTimeA.size() < 6 || caminhoListaTimeB.size() < 6) {

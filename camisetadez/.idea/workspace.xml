@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cdd283f-3835-46cb-8ef7-38cb1389cf7c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/camisetadez.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/date/GolTrue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/date/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/FuncaoPTelaJogo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/FuncoesArquivo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/HomeFuncoes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/HomeAB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/TelaCadastro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/TelaGol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/TelaJogo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/TelaLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/TelaTabela.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/TesteSpinner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Votacao.java" afterDir="false" />
-    </list>
+    <list default="true" id="9cdd283f-3835-46cb-8ef7-38cb1389cf7c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +18,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -50,15 +29,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Matheus/Desktop/PI2/Camiseta10/camisetadez/src/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "onboarding.tips.debug.path": "C:/Users/Matheus/Desktop/PI2/Camiseta10/camisetadez/src/Main.java",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="view" />
@@ -77,6 +57,11 @@
       <updated>1695492895238</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
