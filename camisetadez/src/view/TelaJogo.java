@@ -14,6 +14,9 @@ import javax.swing.border.LineBorder;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import logic.FuncaoPTelaJogo;
@@ -355,7 +358,7 @@ public class TelaJogo extends JFrame {
                     public void run() {
 
                         try {
-                            TelaJogo novaJanela = new TelaJogo("Time1", "Time1");
+                            TelaJogo novaJanela = new TelaJogo("Time1", "Time2");
                             novaJanela.setVisible(true);
                             dispose();
                         } catch (Exception e) {
@@ -383,14 +386,24 @@ public class TelaJogo extends JFrame {
                 for(int i=0; i<timeB.size(); i++){
                     todos.add(timeB.get(i));
                 }
-
+                salvarNomeVoto(quemFezGols, "C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\votacao.txt", false);
                 int contador = 0;
-                Votacao votacao = new Votacao(quemFezGols, todos, contador);
+                Votacao votacao = new Votacao(todos, contador);
                 votacao.setVisible(true);
+                dispose();
 
             }
         });
     }
-
+    public void salvarNomeVoto(List<GolTrue> listaSelecionados, String arquivo, boolean aprender) {
+        try (PrintWriter writer = new PrintWriter(new FileWriter(arquivo, aprender))) {
+            for (int i = 0; i < listaSelecionados.size(); i++) {
+                GolTrue user = listaSelecionados.get(i);
+                writer.println(user.getNome() + "," + user.getGol());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

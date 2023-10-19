@@ -33,3 +33,4 @@ Psor,02,Zagueiro
 Caganeira,44,Goleiro
 furunculo,12,MeioC
 julia,7,Atacante
+Thiago,11,Atacante

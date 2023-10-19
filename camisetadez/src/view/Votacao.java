@@ -2,6 +2,8 @@ package view;
 
 import date.GolTrue;
 import date.User;
+import logic.FuncaoPTelaJogo;
+import logic.FuncoesArquivo;
 
 import java.awt.EventQueue;
 
@@ -11,9 +13,7 @@ import java.awt.Font;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.border.LineBorder;
@@ -23,6 +23,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 public class Votacao extends JFrame {
     //int contador = 0;
     private JPanel contentPane;
+    private List<GolTrue> galeraQFezGol = FuncaoPTelaJogo.lerVotos("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\votacao.txt");
 
     /**
      * Launch the application.
@@ -43,7 +44,7 @@ public class Votacao extends JFrame {
     /**
      * Create the frame.
      */
-    public Votacao(List<GolTrue> galeraQFezGol, List<User> quemJogou, int contador) {
+    public Votacao(/*List<GolTrue> galeraQFezGol, */List<User> quemJogou, int contador) {
 
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         setBounds(100, 100, 684, 617);
@@ -144,8 +145,33 @@ public class Votacao extends JFrame {
         contentPane.add(btnCancelar);
 
         //tabela de votação:
-        List<GolTrue> votacao = votos(galeraQFezGol);
-        salvarNomeVoto(votacao,"C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\votacao.txt",true);
+        String nomeSelecionado;
+        //List<GolTrue> votacao = votos(galeraQFezGol);
+        List<GolTrue> votacao = FuncaoPTelaJogo.lerVotos("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\votacao.txt");
+
+        salvarNomeVoto(votacao,"C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\votacao.txt",false);
+        comboBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String nomeSelecionado = (String) comboBox.getSelectedItem();
+                /*if (nomeSelecionado != null) {
+                    System.out.println("Item selecionado: " + nomeSelecionado);
+                    // Faça o que você precisa com o nome selecionado
+                }*/
+            }
+        });
+        btnBranco.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int finalContador = contador;
+                int contador = finalContador;
+                contador ++;
+
+                Votacao novaJanela = new Votacao(/*galeraQFezGol,*/quemJogou, contador);
+                novaJanela.setVisible(true);
+                dispose();
+            }
+        });
         btnCancelar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -155,9 +181,6 @@ public class Votacao extends JFrame {
         btnConfirmar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //int contador = 0;
-
-                System.out.println("" + contador);
                 int finalContador = contador;
                 EventQueue.invokeLater(new Runnable() {
                     public void run() {
@@ -166,12 +189,24 @@ public class Votacao extends JFrame {
                             int contador = finalContador;
                             if(contador == (quemJogou.size() -1)){
                                 contador = 0;
-                                System.out.println("Fim da votação");
+                                String nomeVencedor = FuncaoPTelaJogo.jogadorComMaisVotos(votacao);
+                                salvarNome(nomeVencedor);
+                                JOptionPane.showMessageDialog(null, "O eleito com gol mais bonito é\n"+ nomeVencedor, "PARABÉNS!", JOptionPane.INFORMATION_MESSAGE);
+                                dispose();
+
                             }else{
                                 contador ++;
-                                //salvarNomeVoto(votacao,"C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\votacao.txt",false);
 
-                                Votacao novaJanela = new Votacao(galeraQFezGol,quemJogou, contador);
+                                for (GolTrue jogador:votacao) {
+                                    if(jogador.getNome().equals(comboBox.getSelectedItem())){
+                                        int votos = jogador.getGol();
+                                        jogador.setGol(votos + 1);
+                                        salvarNomeVoto(votacao,"C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\votacao.txt",false);
+
+                                    }
+                                }
+
+                                Votacao novaJanela = new Votacao(/*galeraQFezGol,*/quemJogou, contador);
                                 novaJanela.setVisible(true);
                                 dispose();
 
@@ -191,8 +226,8 @@ public class Votacao extends JFrame {
           quemFezGol.get(i).setGol(0);
           galera.add(quemFezGol.get(i));
 
-          System.out.print(galera.get(i).getNome());
-          System.out.println(galera.get(i).getGol());
+         /* System.out.print(galera.get(i).getNome());
+          System.out.println(galera.get(i).getGol());*/
       }
         return galera;
     }
@@ -206,4 +241,13 @@ public class Votacao extends JFrame {
             e.printStackTrace();
         }
     }
+    public void salvarNome(String nome) {
+        String arquivo = "C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\golMaisBonito.txt";
+        try (PrintWriter writer = new PrintWriter(new FileWriter(arquivo, false))) {
+                writer.println(nome);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

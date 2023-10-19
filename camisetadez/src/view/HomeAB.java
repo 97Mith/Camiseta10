@@ -8,6 +8,7 @@ import java.awt.FlowLayout;
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import java.awt.Component;
@@ -17,6 +18,9 @@ import java.awt.BorderLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
 
@@ -294,66 +298,111 @@ public class HomeAB extends JFrame {
         table_3.setFont(new Font("Tahoma", Font.PLAIN, 12));
         table_3.setBackground(new Color(0, 64, 0));
 
-        JScrollPane scrollPane_1 = new JScrollPane();
+        String nomeGolBonito = lerNome();
+
         JButton btnAtualizar = new JButton("Atualizar Tabelas");
         btnAtualizar.setBackground(new Color(0, 64, 0));
         btnAtualizar.setForeground(new Color(255, 255, 255));
+        JLabel lblNewLabel = new JLabel("Tabela dos Reis!");
+        lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        lblNewLabel.setForeground(new Color(255, 255, 255));
+        lblNewLabel.setFont(new Font("Verdana", Font.BOLD, 20));
+
+        JPanel panel_3 = new JPanel();
+        panel_3.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+        panel_3.setBackground(new Color(0, 64, 0));
         GroupLayout gl_panel_2 = new GroupLayout(panel_2);
         gl_panel_2.setHorizontalGroup(
-                gl_panel_2.createParallelGroup(Alignment.LEADING)
+                gl_panel_2.createParallelGroup(Alignment.TRAILING)
                         .addGroup(gl_panel_2.createSequentialGroup()
                                 .addContainerGap()
-                                .addGroup(gl_panel_2.createParallelGroup(Alignment.TRAILING)
-                                        .addGroup(gl_panel_2.createSequentialGroup()
-                                                .addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-                                                        .addGroup(gl_panel_2.createSequentialGroup()
-                                                                .addComponent(scrollPane_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                                .addPreferredGap(ComponentPlacement.RELATED)
-                                                                .addComponent(table_3, GroupLayout.PREFERRED_SIZE, 423, GroupLayout.PREFERRED_SIZE)
-                                                                .addGap(18))
-                                                        .addGroup(Alignment.TRAILING, gl_panel_2.createSequentialGroup()
-                                                                .addComponent(btnAtualizar, GroupLayout.PREFERRED_SIZE, 0, GroupLayout.PREFERRED_SIZE)
-                                                                .addGap(27)))
-                                                .addComponent(table_1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addGroup(gl_panel_2.createSequentialGroup()
+                                .addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+                                        .addComponent(btnAtualizar, GroupLayout.PREFERRED_SIZE, 206, GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(Alignment.TRAILING, gl_panel_2.createSequentialGroup()
                                                 .addGroup(gl_panel_2.createParallelGroup(Alignment.TRAILING)
                                                         .addComponent(btnVerListaDe, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
                                                         .addComponent(btnMarcarJogo, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
                                                         .addComponent(btnJogoRapido, GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE))
                                                 .addGap(10))
-                                        .addGroup(gl_panel_2.createSequentialGroup()
+                                        .addGroup(Alignment.TRAILING, gl_panel_2.createSequentialGroup()
                                                 .addComponent(btnNovoJogador, GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
+                                                .addContainerGap())
+                                        .addGroup(gl_panel_2.createSequentialGroup()
+                                                .addComponent(lblNewLabel, GroupLayout.DEFAULT_SIZE, 419, Short.MAX_VALUE)
+                                                .addGap(18))
+                                        .addGroup(gl_panel_2.createSequentialGroup()
+                                                .addComponent(panel_3, GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
                                                 .addContainerGap())))
         );
         gl_panel_2.setVerticalGroup(
                 gl_panel_2.createParallelGroup(Alignment.LEADING)
                         .addGroup(gl_panel_2.createSequentialGroup()
-                                .addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-                                        .addGroup(gl_panel_2.createSequentialGroup()
-                                                .addGap(42)
-                                                .addComponent(btnJogoRapido, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
-                                                .addGap(33)
-                                                .addComponent(btnMarcarJogo, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
-                                                .addGap(33)
-                                                .addComponent(btnVerListaDe, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
-                                                .addGap(34)
-                                                .addComponent(btnNovoJogador, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
-                                                .addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-                                                        .addGroup(gl_panel_2.createSequentialGroup()
-                                                                .addGap(18)
-                                                                .addComponent(table_1, GroupLayout.PREFERRED_SIZE, 164, GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-                                                                .addGroup(gl_panel_2.createSequentialGroup()
-                                                                        .addPreferredGap(ComponentPlacement.UNRELATED)
-                                                                        .addComponent(table_3, GroupLayout.PREFERRED_SIZE, 140, GroupLayout.PREFERRED_SIZE))
-                                                                .addGroup(gl_panel_2.createSequentialGroup()
-                                                                        .addGap(65)
-                                                                        .addComponent(scrollPane_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))))
-                                        .addGroup(Alignment.TRAILING, gl_panel_2.createSequentialGroup()
-                                                .addGap(575)
-                                                .addComponent(btnAtualizar, GroupLayout.DEFAULT_SIZE, 19, Short.MAX_VALUE)))
+                                .addGap(42)
+                                .addComponent(btnJogoRapido, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+                                .addGap(33)
+                                .addComponent(btnMarcarJogo, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+                                .addGap(33)
+                                .addComponent(btnVerListaDe, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+                                .addGap(34)
+                                .addComponent(btnNovoJogador, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+                                .addGap(57)
+                                .addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
+                                .addGap(18)
+                                .addComponent(panel_3, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)
+                                .addGap(127)
+                                .addComponent(btnAtualizar, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addContainerGap())
         );
+
+        JLabel lblGolGold = new JLabel(nomeGolBonito);
+        lblGolGold.setHorizontalAlignment(SwingConstants.LEFT);
+        lblGolGold.setForeground(Color.YELLOW);
+        lblGolGold.setFont(new Font("Verdana", Font.BOLD, 20));
+
+        JLabel lblGolDeOuro = new JLabel("Gol de ouro");
+        lblGolDeOuro.setHorizontalAlignment(SwingConstants.LEFT);
+        lblGolDeOuro.setForeground(Color.WHITE);
+        lblGolDeOuro.setFont(new Font("Verdana", Font.BOLD, 20));
+
+        JLabel lblGoleador = new JLabel("Goleador");
+        lblGoleador.setHorizontalAlignment(SwingConstants.LEFT);
+        lblGoleador.setForeground(Color.WHITE);
+        lblGoleador.setFont(new Font("Verdana", Font.BOLD, 20));
+
+        JLabel lblGoleadorNome = new JLabel("Nome");
+        lblGoleadorNome.setHorizontalAlignment(SwingConstants.LEFT);
+        lblGoleadorNome.setForeground(Color.YELLOW);
+        lblGoleadorNome.setFont(new Font("Verdana", Font.BOLD, 20));
+        GroupLayout gl_panel_3 = new GroupLayout(panel_3);
+        gl_panel_3.setHorizontalGroup(
+                gl_panel_3.createParallelGroup(Alignment.LEADING)
+                        .addGroup(gl_panel_3.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(gl_panel_3.createParallelGroup(Alignment.TRAILING)
+                                        .addGroup(Alignment.LEADING, gl_panel_3.createSequentialGroup()
+                                                .addComponent(lblGoleadorNome, GroupLayout.PREFERRED_SIZE, 219, GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                                                .addComponent(lblGoleador, GroupLayout.PREFERRED_SIZE, 140, GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(gl_panel_3.createSequentialGroup()
+                                                .addComponent(lblGolGold, GroupLayout.PREFERRED_SIZE, 219, GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                                                .addComponent(lblGolDeOuro, GroupLayout.PREFERRED_SIZE, 140, GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap())
+        );
+        gl_panel_3.setVerticalGroup(
+                gl_panel_3.createParallelGroup(Alignment.LEADING)
+                        .addGroup(gl_panel_3.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(gl_panel_3.createParallelGroup(Alignment.BASELINE)
+                                        .addComponent(lblGolDeOuro, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblGolGold, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE))
+                                .addGap(18)
+                                .addGroup(gl_panel_3.createParallelGroup(Alignment.BASELINE)
+                                        .addComponent(lblGoleador, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblGoleadorNome, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(12, Short.MAX_VALUE))
+        );
+        panel_3.setLayout(gl_panel_3);
         panel_2.setLayout(gl_panel_2);
 
         //ações dos botões
@@ -490,7 +539,14 @@ public class HomeAB extends JFrame {
 
 
     }
-    public static void clickAtualizar(){
-
+    public static String lerNome() {
+        String nomeDoArquivo = "C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\golMaisBonito.txt";
+        try (BufferedReader reader = new BufferedReader(new FileReader(nomeDoArquivo))) {
+            String nome = reader.readLine();
+            return nome;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

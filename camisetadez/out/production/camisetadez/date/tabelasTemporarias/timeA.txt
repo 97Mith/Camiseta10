@@ -4,4 +4,4 @@ MATHEUS,7,MeioC
 PAULISTA,10,Atacante
 POMBO,11,Atacante
 JORGE,3,Zagueiro
-SEM SINTOMA,12,MeioC
+MILTON,4,MeioC

@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cdd283f-3835-46cb-8ef7-38cb1389cf7c" name="Changes" comment="" />
+    <list default="true" id="9cdd283f-3835-46cb-8ef7-38cb1389cf7c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/partidaLadoA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/partidaLadoA.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/partidaLadoB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/partidaLadoB.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/timeA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/timeA.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/timeB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/timeB.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/votacao.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/votacao.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/date/jogadores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/jogadores.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/date/posicao.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/posicao.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/date/tabelasTemporarias/partidaLadoA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/tabelasTemporarias/partidaLadoA.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/date/tabelasTemporarias/partidaLadoB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/tabelasTemporarias/partidaLadoB.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/date/tabelasTemporarias/timeA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/tabelasTemporarias/timeA.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/date/tabelasTemporarias/timeB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/tabelasTemporarias/timeB.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/date/tabelasTemporarias/votacao.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/tabelasTemporarias/votacao.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/FuncaoPTelaJogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/FuncaoPTelaJogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/HomeAB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/HomeAB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/TelaJogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/TelaJogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Votacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Votacao.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,16 +47,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "onboarding.tips.debug.path": "C:/Users/Matheus/Desktop/PI2/Camiseta10/camisetadez/src/Main.java",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Matheus/Desktop/PI2/Camiseta10/camisetadez/src/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="view" />

@@ -1,7 +1,7 @@
-FERRUGEM,24,Atacante
-PELE DE MONACO,10,Atacante
-POLENTA,24,Goleiro
-PEIDO DE SOLDA,2,Zagueiro
-VALERIK,2,MeioC
-FURUNCULO,12,MeioC
-JULIA,7,Atacante
+DIGUINHO,1,Goleiro
+LULU,10,Atacante
+MITH,10,Atacante
+ELIZEU,14,Zagueiro
+KASSIO,15,Atacante
+SEM SINTOMA,12,MeioC
+MARCOS,24,Zagueiro
