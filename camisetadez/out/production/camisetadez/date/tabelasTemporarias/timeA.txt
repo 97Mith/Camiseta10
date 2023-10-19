@@ -3,5 +3,13 @@ BARRIGA DE CADELA,1,Goleiro
 MATHEUS,7,MeioC
 PAULISTA,10,Atacante
 POMBO,11,Atacante
+MURIOL,22,Zagueiro
+HELENO,9,Atacante
+JULIA,7,Atacante
+PINGO,2,Zagueiro
+BARRIGA DE CADELA,1,Goleiro
+MATHEUS,7,MeioC
+PAULISTA,10,Atacante
+POMBO,11,Atacante
 JORGE,3,Zagueiro
-MILTON,4,MeioC
+LULU,10,Atacante

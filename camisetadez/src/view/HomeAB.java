@@ -43,9 +43,9 @@ public class HomeAB extends JFrame {
     public static boolean ir = false; //variável que permite avançar a tela te jogos
     DefaultTableModel tableModelA = new DefaultTableModel();
     DefaultTableModel tableModelB = new DefaultTableModel();
-    List<User> listaTodos = FuncoesArquivo.carregarJogadores("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\posicao.txt");
-    List<User> caminhoListaTimeA = FuncoesArquivo.carregarJogadores("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\timeA.txt");
-    List<User> caminhoListaTimeB = FuncoesArquivo.carregarJogadores("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\timeB.txt");
+    List<User> listaTodos = FuncoesArquivo.carregarJogadores("posicao.txt");
+    List<User> caminhoListaTimeA = FuncoesArquivo.carregarJogadores("timeA.txt");
+    List<User> caminhoListaTimeB = FuncoesArquivo.carregarJogadores("timeB.txt");
     List<User> listaSemRepetidos = FuncoesArquivo.removerRepetidos(listaTodos, caminhoListaTimeA, caminhoListaTimeB);
     /**
      * Launch the application.
@@ -422,7 +422,7 @@ public class HomeAB extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 ir = false;
                 List<User> removidos = FuncoesArquivo.removerUsuariosSelecionados(caminhoListaTimeA, tableModelA);
-                FuncoesArquivo.escreverDadosNoTxt(tableModelA,"C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\timeA.txt");
+                FuncoesArquivo.escreverDadosNoTxt(tableModelA,"timeA.txt");
                 btnAtualizar.doClick();
             }
         });
@@ -431,8 +431,8 @@ public class HomeAB extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 ir = false;
                 //caminhoListaTimeA.clear();
-                FuncoesArquivo.limparTabela("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\timeA.txt");
-                FuncoesArquivo.limparTabela("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\partidaLadoA.txt");
+                FuncoesArquivo.limparTabela("timeA.txt");
+                FuncoesArquivo.limparTabela("partidaLadoA.txt");
                 btnAtualizar.doClick();
             }
         });
@@ -451,7 +451,7 @@ public class HomeAB extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 ir = false;
                 List<User> removidos = FuncoesArquivo.removerUsuariosSelecionados(caminhoListaTimeB, tableModelB);
-                FuncoesArquivo.escreverDadosNoTxt(tableModelB,"C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\timeB.txt");
+                FuncoesArquivo.escreverDadosNoTxt(tableModelB,"timeB.txt");
                 btnAtualizar.doClick();
             }
         });
@@ -460,8 +460,8 @@ public class HomeAB extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 ir = false;
                 //caminhoListaTimeA.clear();
-                FuncoesArquivo.limparTabela("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\timeB.txt");
-                FuncoesArquivo.limparTabela("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\partidaLadoB.txt");
+                FuncoesArquivo.limparTabela("timeB.txt");
+                FuncoesArquivo.limparTabela("partidaLadoB.txt");
                 btnAtualizar.doClick();
             }
         });
@@ -540,7 +540,7 @@ public class HomeAB extends JFrame {
 
     }
     public static String lerNome() {
-        String nomeDoArquivo = "C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\golMaisBonito.txt";
+        String nomeDoArquivo = "golMaisBonito.txt";
         try (BufferedReader reader = new BufferedReader(new FileReader(nomeDoArquivo))) {
             String nome = reader.readLine();
             return nome;

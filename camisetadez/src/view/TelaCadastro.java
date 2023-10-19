@@ -283,7 +283,7 @@ public class TelaCadastro extends JFrame {
 
     public void salvarUsuarioSenha(String nome, String senha) {
 
-        String caminhoArquivo = "C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\jogadores.txt";
+        String caminhoArquivo = "jogadores.txt";
 
 
         // logica para salvar os dados do jogador
@@ -296,7 +296,7 @@ public class TelaCadastro extends JFrame {
         }
     }
     public void salvarNumeroPosicao(String nome, String numeroC, String posicao){
-        String caminhoArquivo = "C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\posicao.txt";
+        String caminhoArquivo = "posicao.txt";
 
         try (PrintWriter writer = new PrintWriter(new FileWriter(caminhoArquivo, true))) {
             writer.println(nome + "," + numeroC + "," + posicao);
@@ -313,7 +313,7 @@ public class TelaCadastro extends JFrame {
 
     }
     public boolean verificarNome(String nome) {
-        try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\jogadores.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("jogadores.txt"))) {
             String linha;
 
             while ((linha = br.readLine()) != null) {

@@ -81,17 +81,7 @@ public class FuncoesArquivo {
         table.getColumnModel().getColumn(3).setPreferredWidth(145);
     }
 
-    public static void main(String[] args) {
-        List<User> principal = carregarJogadores("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\posicao.txt");
-        List<User> timeA = carregarJogadores("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\timeA.txt");
-        List<User> timeB = carregarJogadores("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\timeB.txt");
-        List<User> resultado = removerRepetidos(principal, timeA, timeB);
-        for(int i = 0; i<resultado.size(); i++) {
-            System.out.println(resultado.get(i).getNome());
-        }
 
-
-    }
 
     /*public static void passarDados(List<User> tabela1, List<User> tabela2) {
         for (User usuario : tabela1) {

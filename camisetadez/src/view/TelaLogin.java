@@ -118,11 +118,11 @@ public class TelaLogin extends JFrame {
         mostrarSenhaCheckBox.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
-                // Quando a caixa de seleção for marcada, mostre a senha
+                // Quando a caixa de seleção for marcada, mostra a senha
                 if (mostrarSenhaCheckBox.isSelected()) {
                     passwordField.setEchoChar((char) 0); // Define o caractere de ocultação para vazio
                 } else {
-                    // Quando a caixa de seleção for desmarcada, oculte a senha
+                    // Quando a caixa de seleção for desmarcada, oculta a senha
                     passwordField.setEchoChar('•'); // Defina o caractere de ocultação padrão (geralmente '*')
                 }
             }
@@ -161,7 +161,7 @@ public class TelaLogin extends JFrame {
     }
 
     private boolean verificarCredenciais(String usuario, String senha) {
-        try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\jogadores.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("jogadores.txt"))) {
             String linha;
             while ((linha = br.readLine()) != null) {
                 String[] partes = linha.split(",");

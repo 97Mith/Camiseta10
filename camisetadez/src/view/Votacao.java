@@ -23,7 +23,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 public class Votacao extends JFrame {
     //int contador = 0;
     private JPanel contentPane;
-    private List<GolTrue> galeraQFezGol = FuncaoPTelaJogo.lerVotos("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\votacao.txt");
+    private List<GolTrue> galeraQFezGol = FuncaoPTelaJogo.lerVotos("votacao.txt");
 
     /**
      * Launch the application.
@@ -147,9 +147,9 @@ public class Votacao extends JFrame {
         //tabela de votação:
         String nomeSelecionado;
         //List<GolTrue> votacao = votos(galeraQFezGol);
-        List<GolTrue> votacao = FuncaoPTelaJogo.lerVotos("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\votacao.txt");
+        List<GolTrue> votacao = FuncaoPTelaJogo.lerVotos("votacao.txt");
 
-        salvarNomeVoto(votacao,"C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\votacao.txt",false);
+        salvarNomeVoto(votacao,"votacao.txt",false);
         comboBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -201,7 +201,7 @@ public class Votacao extends JFrame {
                                     if(jogador.getNome().equals(comboBox.getSelectedItem())){
                                         int votos = jogador.getGol();
                                         jogador.setGol(votos + 1);
-                                        salvarNomeVoto(votacao,"C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\votacao.txt",false);
+                                        salvarNomeVoto(votacao,"votacao.txt",false);
 
                                     }
                                 }
@@ -242,7 +242,7 @@ public class Votacao extends JFrame {
         }
     }
     public void salvarNome(String nome) {
-        String arquivo = "C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\golMaisBonito.txt";
+        String arquivo = "golMaisBonito.txt";
         try (PrintWriter writer = new PrintWriter(new FileWriter(arquivo, false))) {
                 writer.println(nome);
         } catch (IOException e) {

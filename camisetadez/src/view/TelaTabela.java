@@ -24,16 +24,16 @@ public class TelaTabela extends JFrame {
     private List<User> listaUsuarios;
     private List<User> listaSelecionados;
     private List<User> selecionados;
-    private List<User> selectA = FuncoesArquivo.carregarJogadores("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\timeA.txt");
-    private List<User> selectB = FuncoesArquivo.carregarJogadores("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\timeB.txt");
+    private List<User> selectA = FuncoesArquivo.carregarJogadores("timeA.txt");
+    private List<User> selectB = FuncoesArquivo.carregarJogadores("timeB.txt");
 
     public List<User> getSelecionados() {
         return selecionados;
     }
-    public String caminhoArquivoA = "C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\timeA.txt";
-    public String caminhoArquivoB = "C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\timeB.txt";
-    public String caminhoGolsA = "C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\partidaLadoA.txt";
-    public String caminhoGolsB = "C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\partidaLadoB.txt";
+    public String caminhoArquivoA = "timeA.txt";
+    public String caminhoArquivoB = "timeB.txt";
+    public String caminhoGolsA = "partidaLadoA.txt";
+    public String caminhoGolsB = "partidaLadoB.txt";
     public TelaTabela(List<User> usuarios, boolean AB, JButton botaoAtualizar) {
 
         this.listaUsuarios = usuarios;
@@ -171,7 +171,7 @@ public class TelaTabela extends JFrame {
         // Exemplo de uso:
         List<User> usuarios = new ArrayList<>();
         ArrayList<User> selecionados = new ArrayList<>();
-        FuncoesArquivo.carregarUsuarios("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\posicao.txt", usuarios);
+        FuncoesArquivo.carregarUsuarios("posicao.txt", usuarios);
 
         /*TelaTabela tela = new TelaTabela(usuarios, true);
         tela.setVisible(true);*/

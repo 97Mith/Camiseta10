@@ -29,8 +29,8 @@ public class TelaJogo extends JFrame {
     private JTable tableLadoA;
     private JTable tableLadoB;
     private JTextField textFieldTempo;
-    private List<User> timeA = FuncoesArquivo.carregarGols("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\partidaLadoA.txt");
-    private List<User> timeB = FuncoesArquivo.carregarGols("C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\partidaLadoB.txt");
+    private List<User> timeA = FuncoesArquivo.carregarGols("partidaLadoA.txt");
+    private List<User> timeB = FuncoesArquivo.carregarGols("partidaLadoB.txt");
     private List<GolTrue> times;
     private boolean AB;
     private List<GolTrue> quemFezGols;
@@ -386,7 +386,7 @@ public class TelaJogo extends JFrame {
                 for(int i=0; i<timeB.size(); i++){
                     todos.add(timeB.get(i));
                 }
-                salvarNomeVoto(quemFezGols, "C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\votacao.txt", false);
+                salvarNomeVoto(quemFezGols, "votacao.txt", false);
                 int contador = 0;
                 Votacao votacao = new Votacao(todos, contador);
                 votacao.setVisible(true);

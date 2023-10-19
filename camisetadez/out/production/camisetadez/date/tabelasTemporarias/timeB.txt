@@ -1,7 +1,8 @@
+JORGE,3,Zagueiro
 DIGUINHO,1,Goleiro
 LULU,10,Atacante
-MITH,10,Atacante
-ELIZEU,14,Zagueiro
-KASSIO,15,Atacante
-SEM SINTOMA,12,MeioC
-MARCOS,24,Zagueiro
+THIAGO,11,Atacante
+PEIDO DE SOLDA,2,Zagueiro
+RODOFREDO,55,Zagueiro
+MICHAEL,23,Atacante
+VALERIK,2,MeioC

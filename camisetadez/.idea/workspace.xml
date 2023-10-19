@@ -11,16 +11,15 @@
       <change beforePath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/timeA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/timeA.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/timeB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/timeB.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/votacao.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/votacao.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/date/jogadores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/jogadores.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/date/posicao.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/posicao.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/date/tabelasTemporarias/partidaLadoA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/tabelasTemporarias/partidaLadoA.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/date/tabelasTemporarias/partidaLadoB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/tabelasTemporarias/partidaLadoB.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/date/tabelasTemporarias/timeA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/tabelasTemporarias/timeA.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/date/tabelasTemporarias/timeB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/tabelasTemporarias/timeB.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/date/tabelasTemporarias/votacao.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/tabelasTemporarias/votacao.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/FuncaoPTelaJogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/FuncaoPTelaJogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/FuncoesArquivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/FuncoesArquivo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/HomeAB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/HomeAB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/TelaJogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/TelaJogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/TelaCadastro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/TelaCadastro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/TelaGol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/TelaGol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/TelaLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/TelaLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/TelaTabela.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/TelaTabela.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/Votacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Votacao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

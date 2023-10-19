@@ -25,8 +25,8 @@ public class TelaGol extends JFrame {
     private List<User> listaUsuarios;
     private List<User> listaUsuarios2;
     private List<User> listaSelecionados;
-    public String caminhoGolsA = "C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\partidaLadoA.txt";
-    public String caminhoGolsB = "C:\\Users\\Matheus\\Desktop\\PI2\\Camiseta10\\camisetadez\\src\\date\\tabelasTemporarias\\partidaLadoB.txt";
+    public String caminhoGolsA = "partidaLadoA.txt";
+    public String caminhoGolsB = "partidaLadoB.txt";
 
 
     public TelaGol(JButton botaoAtualizar, boolean AB) {
