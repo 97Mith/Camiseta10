@@ -311,7 +311,7 @@ public class HomeAB extends JFrame {
         JPanel panel_3 = new JPanel();
         panel_3.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
         panel_3.setBackground(new Color(0, 64, 0));
-        JButton btnConfig = new JButton("☼");
+        JButton btnConfig = new JButton("†");
         btnConfig.setForeground(new Color(255, 255, 255));
         btnConfig.setFont(new Font("MS Gothic", Font.BOLD, 38));
         btnConfig.setBackground(new Color(128, 0, 0));
@@ -548,8 +548,8 @@ public class HomeAB extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 List<User> lista = FuncoesArquivo.carregarJogadores("posicao.txt");
-                ExcluirJogador excluirJogador = new ExcluirJogador(lista, false, btnAtualizar);
-                excluirJogador.setVisible(true);
+                TelaDeConfirmacao telaDeConfirmacao = new TelaDeConfirmacao(btnAtualizar);
+                telaDeConfirmacao.setVisible(true);
             }
         });
 

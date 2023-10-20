@@ -14,7 +14,6 @@ Kassio,0
 Sem sintoma,0
 Zezinho,0
 Ferrugem,0
-pele de monaco,0
 polenta,0
 peido de solda,0
 rodofredo,0
@@ -23,8 +22,10 @@ Muriol,0
 heleno,0
 Math,0
 Valerik,0
-luiz,0
 Ze,0
 Caio,0
 Caganeira,0
 furunculo,0
+Together,0
+Purga,0
+Vera Verão,0

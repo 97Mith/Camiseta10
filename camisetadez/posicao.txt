@@ -14,7 +14,6 @@ Kassio,15,Atacante
 Sem sintoma,12,MeioC
 Zezinho,12,MeioC
 Ferrugem,24,Atacante
-pele de monaco,10,Atacante
 polenta,24,Goleiro
 peido de solda,2,Zagueiro
 rodofredo,55,Zagueiro
@@ -23,8 +22,10 @@ Muriol,22,Zagueiro
 heleno,9,Atacante
 Math,1,Goleiro
 Valerik,2,MeioC
-luiz,11,Atacante
 Ze,11,Atacante
 Caio,24,Atacante
 Caganeira,44,Goleiro
 furunculo,12,MeioC
+Together,22,Zagueiro
+Purga,2,MeioC
+Vera Verão,12,Atacante

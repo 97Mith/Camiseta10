@@ -14,7 +14,6 @@ Kassio,Santaquina
 Sem sintoma,123456
 Zezinho,8899
 Ferrugem,2233
-pele de monaco,mithh
 polenta,12345
 peido de solda,1234
 rodofredo,555
@@ -23,8 +22,10 @@ Muriol,kiko
 heleno,123456
 Math,8545
 Valerik,120707
-luiz,123456
 Ze,12321
 Caio,123
 Caganeira,98569856
 furunculo,11
+Together,asdasd
+Purga,332233
+Vera Verão,1212
