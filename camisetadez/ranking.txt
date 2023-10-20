@@ -11,9 +11,7 @@ Milton,0
 Mith,0
 Elizeu,0
 Kassio,0
-Matheusao,0
 Sem sintoma,0
-Marcos,0
 Zezinho,0
 Ferrugem,0
 pele de monaco,0
@@ -21,7 +19,6 @@ polenta,0
 peido de solda,0
 rodofredo,0
 mike,0
-michael,0
 Muriol,0
 heleno,0
 Math,0
@@ -29,7 +26,5 @@ Valerik,0
 luiz,0
 Ze,0
 Caio,0
-Psor,0
 Caganeira,0
 furunculo,0
-julia,0

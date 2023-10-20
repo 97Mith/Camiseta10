@@ -1,7 +1,13 @@
 package logic;
+import date.GolTrue;
 import date.User;
+import date.UserAttribute;
 import logic.FuncoesArquivo;
 import javax.swing.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFuncoes {
@@ -35,5 +41,28 @@ public class HomeFuncoes {
         }
         return true;
     }
+
+    public static List<UserAttribute> lerNomeEAtributo(String nomeArquivo) {
+        List<UserAttribute> listaUserAttribute = new ArrayList<>();
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(nomeArquivo))) {
+            String linha;
+            while ((linha = reader.readLine()) != null) {
+                String[] partes = linha.split(",");
+                if (partes.length == 2) {
+                    String nome = partes[0].trim();
+                    String atributo = partes[1].trim();
+                    UserAttribute userAttribute = new UserAttribute(nome, atributo);
+                    listaUserAttribute.add(userAttribute);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Erro ao ler o arquivo: " + nomeArquivo);
+        }
+
+        return listaUserAttribute;
+    }
+
 
 }

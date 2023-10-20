@@ -5,22 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cdd283f-3835-46cb-8ef7-38cb1389cf7c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/date/UserAttribute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/ExcluirJogador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/TelaDeConfirmacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/partidaLadoA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/partidaLadoA.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/partidaLadoB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/partidaLadoB.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/timeA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/timeA.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/timeB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/timeB.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/votacao.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camisetadez/date/tabelasTemporarias/votacao.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/date/tabelasTemporarias/partidaLadoA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/tabelasTemporarias/partidaLadoA.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/date/tabelasTemporarias/partidaLadoB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/tabelasTemporarias/partidaLadoB.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/date/tabelasTemporarias/timeA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/tabelasTemporarias/timeA.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/FuncoesArquivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/FuncoesArquivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jogadores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/jogadores.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partidaLadoA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/partidaLadoA.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posicao.txt" beforeDir="false" afterPath="$PROJECT_DIR$/posicao.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ranking.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ranking.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/date/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/HomeFuncoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/HomeFuncoes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/HomeAB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/HomeAB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/TelaCadastro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/TelaCadastro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/TelaGol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/TelaGol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/TelaLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/TelaLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/TelaTabela.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/TelaTabela.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Votacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Votacao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +57,57 @@
       <recent name="view" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="date" />
       <recent name="view" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.HomeAB">
+    <configuration name="ExcluirJogador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.ExcluirJogador" />
+      <module name="camisetadez" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomeAB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.HomeAB" />
+      <module name="camisetadez" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TelaDeConfirmacao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.TelaDeConfirmacao" />
+      <module name="camisetadez" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HomeAB" />
+        <item itemvalue="Application.TelaDeConfirmacao" />
+        <item itemvalue="Application.ExcluirJogador" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

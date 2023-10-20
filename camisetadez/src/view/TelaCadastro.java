@@ -240,21 +240,25 @@ public class TelaCadastro extends JFrame {
                             posicao = "Goleiro";
                             salvarNumeroPosicao(nome, nCamiseta,posicao);
                             salvarUsuarioSenha(nome, senha);
+                            salvarUsuarioGols(nome);
                             limparCampos(); grupoPosicao.clearSelection();
                         } else if (rdbtnZagueiro.isSelected()) {
                             posicao = "Zagueiro";
                             salvarNumeroPosicao(nome, nCamiseta,posicao);
                             salvarUsuarioSenha(nome, senha);
+                            salvarUsuarioGols(nome);
                             limparCampos(); grupoPosicao.clearSelection();
                         } else if (rdbtnMeioC.isSelected()) {
                             posicao = "MeioC";
                             salvarNumeroPosicao(nome, nCamiseta,posicao);
                             salvarUsuarioSenha(nome, senha);
+                            salvarUsuarioGols(nome);
                             limparCampos(); grupoPosicao.clearSelection();
                         } else if (rdbtnAtacante.isSelected()) {
                             posicao = "Atacante";
                             salvarNumeroPosicao(nome, nCamiseta,posicao);
                             salvarUsuarioSenha(nome, senha);
+                            salvarUsuarioGols(nome);
                             limparCampos(); grupoPosicao.clearSelection();
                         }  else {
                             JOptionPane.showMessageDialog(null, "Escolha a posição do jogador", "Erro", JOptionPane.ERROR_MESSAGE);
@@ -291,6 +295,19 @@ public class TelaCadastro extends JFrame {
 
             writer.println(nome + "," + senha);
             JOptionPane.showMessageDialog(null, "Jogador registrado com sucesso!", "Boa", JOptionPane.INFORMATION_MESSAGE);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }public void salvarUsuarioGols(String nome) {
+
+        String caminhoArquivo = "ranking.txt";
+
+
+        // logica para salvar os dados do jogador
+        try (PrintWriter writer = new PrintWriter(new FileWriter(caminhoArquivo, true))) {
+
+            writer.println(nome + "," + 0);
+            //JOptionPane.showMessageDialog(null, "Jogador registrado com sucesso!", "Boa", JOptionPane.INFORMATION_MESSAGE);
         } catch (IOException e) {
             e.printStackTrace();
         }

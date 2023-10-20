@@ -311,28 +311,34 @@ public class HomeAB extends JFrame {
         JPanel panel_3 = new JPanel();
         panel_3.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
         panel_3.setBackground(new Color(0, 64, 0));
+        JButton btnConfig = new JButton("☼");
+        btnConfig.setForeground(new Color(255, 255, 255));
+        btnConfig.setFont(new Font("MS Gothic", Font.BOLD, 38));
+        btnConfig.setBackground(new Color(128, 0, 0));
         GroupLayout gl_panel_2 = new GroupLayout(panel_2);
         gl_panel_2.setHorizontalGroup(
                 gl_panel_2.createParallelGroup(Alignment.TRAILING)
                         .addGroup(gl_panel_2.createSequentialGroup()
                                 .addContainerGap()
-                                .addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+                                .addGroup(gl_panel_2.createParallelGroup(Alignment.TRAILING)
                                         .addComponent(btnAtualizar, GroupLayout.PREFERRED_SIZE, 206, GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(Alignment.TRAILING, gl_panel_2.createSequentialGroup()
+                                        .addGroup(gl_panel_2.createSequentialGroup()
                                                 .addGroup(gl_panel_2.createParallelGroup(Alignment.TRAILING)
                                                         .addComponent(btnVerListaDe, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
                                                         .addComponent(btnMarcarJogo, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
                                                         .addComponent(btnJogoRapido, GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE))
                                                 .addGap(10))
-                                        .addGroup(Alignment.TRAILING, gl_panel_2.createSequentialGroup()
+                                        .addGroup(gl_panel_2.createSequentialGroup()
                                                 .addComponent(btnNovoJogador, GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
                                                 .addContainerGap())
                                         .addGroup(gl_panel_2.createSequentialGroup()
-                                                .addComponent(lblNewLabel, GroupLayout.DEFAULT_SIZE, 419, Short.MAX_VALUE)
-                                                .addGap(18))
-                                        .addGroup(gl_panel_2.createSequentialGroup()
                                                 .addComponent(panel_3, GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
-                                                .addContainerGap())))
+                                                .addContainerGap())
+                                        .addGroup(gl_panel_2.createSequentialGroup()
+                                                .addGroup(gl_panel_2.createParallelGroup(Alignment.TRAILING)
+                                                        .addComponent(btnConfig)
+                                                        .addComponent(lblNewLabel, GroupLayout.DEFAULT_SIZE, 419, Short.MAX_VALUE))
+                                                .addGap(18))))
         );
         gl_panel_2.setVerticalGroup(
                 gl_panel_2.createParallelGroup(Alignment.LEADING)
@@ -345,7 +351,9 @@ public class HomeAB extends JFrame {
                                 .addComponent(btnVerListaDe, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
                                 .addGap(34)
                                 .addComponent(btnNovoJogador, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
-                                .addGap(57)
+                                .addPreferredGap(ComponentPlacement.UNRELATED)
+                                .addComponent(btnConfig, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(ComponentPlacement.RELATED)
                                 .addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
                                 .addGap(18)
                                 .addComponent(panel_3, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)
@@ -518,8 +526,8 @@ public class HomeAB extends JFrame {
                     JOptionPane.showMessageDialog(null, "Atualize as tabelas!", "Nota", JOptionPane.WARNING_MESSAGE);
                 } else if (caminhoListaTimeA.size() < 6 || caminhoListaTimeB.size() < 6) {
                     JOptionPane.showMessageDialog(null, "Minimo 7 jogadores por time!", "Erro", JOptionPane.WARNING_MESSAGE);
-                } else if (caminhoListaTimeA.size() > 14 || caminhoListaTimeB.size() > 14) {
-                    JOptionPane.showMessageDialog(null, "Máximo 14 jogadores por time!", "Limite jogadores atingido", JOptionPane.WARNING_MESSAGE);
+                } else if (caminhoListaTimeA.size() > 10 || caminhoListaTimeB.size() > 10) {
+                    JOptionPane.showMessageDialog(null, "Máximo 10 jogadores por time!", "Limite jogadores atingido", JOptionPane.WARNING_MESSAGE);
                 } else if (numeroJogadores != -1 && numeroJogadores != 0 && numeroJogadores != 1){
                     System.out.println(numeroJogadores);
                     JOptionPane.showMessageDialog(null, "Cada time deve ter numeros iguais de jogadores.\n (diferença de 1 jogador é permitido)", "Jogo justo", JOptionPane.WARNING_MESSAGE);
@@ -536,7 +544,14 @@ public class HomeAB extends JFrame {
                 telaCadastro.setVisible(true);
             }
         });
-
+        btnConfig.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                List<User> lista = FuncoesArquivo.carregarJogadores("posicao.txt");
+                ExcluirJogador excluirJogador = new ExcluirJogador(lista, false, btnAtualizar);
+                excluirJogador.setVisible(true);
+            }
+        });
 
     }
     public static String lerNome() {

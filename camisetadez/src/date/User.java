@@ -32,7 +32,7 @@ public class User {
     }
 
     public void setNome(String nome) {
-        this.nome = nome.toUpperCase();
+        this.nome = nome;
     }
 
     public int getNumero() {
