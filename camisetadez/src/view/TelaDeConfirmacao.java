@@ -5,23 +5,19 @@ import logic.FuncoesArquivo;
 
 import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.List;
 import javax.swing.border.LineBorder;
-import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
-import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.JPasswordField;
-import javax.swing.SwingConstants;
-import javax.swing.JButton;
 
 public class TelaDeConfirmacao extends JFrame {
 
@@ -78,7 +74,7 @@ public class TelaDeConfirmacao extends JFrame {
         textField.setColumns(10);
 
         passwordField = new JPasswordField();
-        passwordField.setHorizontalAlignment(SwingConstants.CENTER);
+        passwordField.setHorizontalAlignment(SwingConstants.LEFT);
         passwordField.setFont(new Font("Tahoma", Font.PLAIN, 16));
 
         JLabel lblNomeUsuario = new JLabel("Confirmar Usuario");
@@ -148,8 +144,16 @@ public class TelaDeConfirmacao extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 List<User> lista = FuncoesArquivo.carregarJogadores("posicao.txt");
-                ExcluirJogador excluirJogador = new ExcluirJogador(lista, false, btnAtu);
-                excluirJogador.setVisible(true);
+                String usuarioDigitado = textField.getText();
+                char[] senhaChars = passwordField.getPassword();
+                String senhaDigitada = new String(senhaChars);
+                if (verificarCredenciais(usuarioDigitado, senhaDigitada)) {
+                    ExcluirJogador excluirJogador = new ExcluirJogador(lista, false, btnAtu);
+                    excluirJogador.setVisible(true);
+                    dispose();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Usuário ou senha incorretos", "Erro", JOptionPane.ERROR_MESSAGE);
+                }
             }
         });
 
@@ -167,5 +171,21 @@ public class TelaDeConfirmacao extends JFrame {
             }
         });
 
+
+    }
+    private boolean verificarCredenciais(String usuario, String senha) {
+        try (BufferedReader br = new BufferedReader(new FileReader("jogadores.txt"))) {
+            String linha;
+            while ((linha = br.readLine()) != null) {
+                String[] partes = linha.split(",");
+                if (partes.length >= 2 && partes[0].equals(usuario) && partes[1].equals(senha)) {
+                    return true;
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        // As credenciais não correspondem
+        return false;
     }
 }

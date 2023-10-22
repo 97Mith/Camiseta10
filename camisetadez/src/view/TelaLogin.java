@@ -123,7 +123,7 @@ public class TelaLogin extends JFrame {
                     passwordField.setEchoChar((char) 0); // Define o caractere de ocultação para vazio
                 } else {
                     // Quando a caixa de seleção for desmarcada, oculta a senha
-                    passwordField.setEchoChar('•'); // Defina o caractere de ocultação padrão (geralmente '*')
+                    passwordField.setEchoChar('•');
                 }
             }
         });
