@@ -21,7 +21,6 @@ mike,321
 Muriol,kiko
 heleno,123456
 Math,8545
-Valerik,120707
 Ze,12321
 Caio,123
 Caganeira,98569856
@@ -29,3 +28,8 @@ furunculo,11
 Together,asdasd
 Purga,332233
 Vera Verão,1212
+Corpo de selulite,963258
+caraDeCachorro,2233
+PedrinMatadorDePorco,112233
+Regulagem,123
+Marcio,2

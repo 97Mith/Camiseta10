@@ -31,7 +31,7 @@ public class TelaJogo extends JFrame {
     private JTextField textFieldTempo;
     private List<User> timeA = FuncoesArquivo.carregarGols("partidaLadoA.txt");
     private List<User> timeB = FuncoesArquivo.carregarGols("partidaLadoB.txt");
-    private List<GolTrue> times;
+    private List<GolTrue> times = FuncaoPTelaJogo.lerVotos("ranking.txt");
     private boolean AB;
     private List<GolTrue> quemFezGols;
     private List<GolTrue> quemFezGols2;
@@ -387,6 +387,12 @@ public class TelaJogo extends JFrame {
                     todos.add(timeB.get(i));
                 }
                 salvarNomeVoto(quemFezGols, "votacao.txt", false);
+                //ranking
+                List<GolTrue> ranking = FuncaoPTelaJogo.lerVotos("ranking.txt");
+                List<GolTrue> novoRanking = FuncaoPTelaJogo.atualizarRanking(quemFezGols, ranking);
+                salvarNomeVoto(novoRanking, "ranking.txt", false);
+                String nomeMaisGols = FuncaoPTelaJogo.jogadorComMaisVotos(novoRanking);
+                salvarNome(nomeMaisGols, "maisGols.txt");
                 int contador = 0;
                 Votacao votacao = new Votacao(todos, contador);
                 votacao.setVisible(true);
@@ -401,6 +407,14 @@ public class TelaJogo extends JFrame {
                 GolTrue user = listaSelecionados.get(i);
                 writer.println(user.getNome() + "," + user.getGol());
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public void salvarNome(String nome, String arquivo) {
+
+        try (PrintWriter writer = new PrintWriter(new FileWriter(arquivo, false))) {
+            writer.println(nome);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,3 +1,2 @@
-PINGO,1
-FURUNCULO,1
-PEIDO DE SOLDA,1
+Serginho,14
+caraDeCachorro,3

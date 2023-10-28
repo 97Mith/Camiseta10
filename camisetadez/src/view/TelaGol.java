@@ -95,7 +95,7 @@ public class TelaGol extends JFrame {
 
                 //bloco if para escrever temporariamente o gol em um txt
                 if(AB){
-                    moverSelecionados(); //função que adiciona um gol
+                    moverSelecionados(); //função modificada para adicionar adiciona um gol
                     FuncoesArquivo.limparTabela(caminhoGolsA);
                     salvarNomeGol(listaUsuarios, caminhoGolsA);
 

@@ -274,7 +274,8 @@ public class HomeAB extends JFrame {
         btnJogoRapido.setFont(new Font("Tahoma", Font.BOLD, 14));
         btnJogoRapido.setBackground(new Color(0, 128, 0));
 
-        JButton btnMarcarJogo = new JButton("Marcar jogo");
+        JButton btnMarcarJogo = new JButton("Gerar times");
+        btnMarcarJogo.setEnabled(false);
         btnMarcarJogo.setForeground(Color.WHITE);
         btnMarcarJogo.setFont(new Font("Tahoma", Font.BOLD, 14));
         btnMarcarJogo.setBackground(new Color(0, 128, 0));
@@ -298,7 +299,8 @@ public class HomeAB extends JFrame {
         table_3.setFont(new Font("Tahoma", Font.PLAIN, 12));
         table_3.setBackground(new Color(0, 64, 0));
 
-        String nomeGolBonito = lerNome();
+        String nomeGolBonito = lerNome("golMaisBonito.txt");
+        String nomeMaisGols = lerNome( "maisGols.txt");
 
         JButton btnAtualizar = new JButton("Atualizar Tabelas");
         btnAtualizar.setBackground(new Color(0, 64, 0));
@@ -377,7 +379,7 @@ public class HomeAB extends JFrame {
         lblGoleador.setForeground(Color.WHITE);
         lblGoleador.setFont(new Font("Verdana", Font.BOLD, 20));
 
-        JLabel lblGoleadorNome = new JLabel("Nome");
+        JLabel lblGoleadorNome = new JLabel(nomeMaisGols);
         lblGoleadorNome.setHorizontalAlignment(SwingConstants.LEFT);
         lblGoleadorNome.setForeground(Color.YELLOW);
         lblGoleadorNome.setFont(new Font("Verdana", Font.BOLD, 20));
@@ -554,8 +556,8 @@ public class HomeAB extends JFrame {
         });
 
     }
-    public static String lerNome() {
-        String nomeDoArquivo = "golMaisBonito.txt";
+    public static String lerNome(String nomeDoArquivo) {
+
         try (BufferedReader reader = new BufferedReader(new FileReader(nomeDoArquivo))) {
             String nome = reader.readLine();
             return nome;

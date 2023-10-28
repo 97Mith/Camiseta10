@@ -190,7 +190,7 @@ public class Votacao extends JFrame {
                             if(contador == (quemJogou.size() -1)){
                                 contador = 0;
                                 String nomeVencedor = FuncaoPTelaJogo.jogadorComMaisVotos(votacao);
-                                salvarNome(nomeVencedor);
+                                salvarNome(nomeVencedor, "golMaisBonito.txt");
                                 JOptionPane.showMessageDialog(null, "O eleito com gol mais bonito é\n"+ nomeVencedor, "PARABÉNS!", JOptionPane.INFORMATION_MESSAGE);
                                 dispose();
 
@@ -241,8 +241,8 @@ public class Votacao extends JFrame {
             e.printStackTrace();
         }
     }
-    public void salvarNome(String nome) {
-        String arquivo = "golMaisBonito.txt";
+    public void salvarNome(String nome, String arquivo) {
+
         try (PrintWriter writer = new PrintWriter(new FileWriter(arquivo, false))) {
                 writer.println(nome);
         } catch (IOException e) {

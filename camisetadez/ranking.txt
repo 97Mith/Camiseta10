@@ -1,15 +1,16 @@
+Serginho,1
+caraDeCachorro,3
+Barriga de Cadela,2
+Matheus,1
+Pombo,2
+Milton,1
+Elizeu,1
 Pingo,0
-Barriga de Cadela,0
-Matheus,0
 Paulista,0
-Pombo,0
 Jorge,0
 Diguinho,0
 Lulu,0
-Serginho,0
-Milton,0
 Mith,0
-Elizeu,0
 Kassio,0
 Sem sintoma,0
 Zezinho,0
@@ -21,7 +22,6 @@ mike,0
 Muriol,0
 heleno,0
 Math,0
-Valerik,0
 Ze,0
 Caio,0
 Caganeira,0
@@ -29,3 +29,7 @@ furunculo,0
 Together,0
 Purga,0
 Vera Verão,0
+Corpo de selulite,0
+PedrinMatadorDePorco,0
+Regulagem,0
+Marcio,0

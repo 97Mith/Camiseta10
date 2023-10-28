@@ -5,9 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cdd283f-3835-46cb-8ef7-38cb1389cf7c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/logic/Testes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/TelaDeConfirmacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/TelaDeConfirmacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/TelaLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/TelaLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golMaisBonito.txt" beforeDir="false" afterPath="$PROJECT_DIR$/golMaisBonito.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jogadores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/jogadores.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partidaLadoA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/partidaLadoA.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partidaLadoB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/partidaLadoB.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posicao.txt" beforeDir="false" afterPath="$PROJECT_DIR$/posicao.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ranking.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ranking.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/FuncaoPTelaJogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/FuncaoPTelaJogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/HomeAB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/HomeAB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/TelaGol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/TelaGol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/TelaJogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/TelaJogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/TesteSpinner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Votacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Votacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timeA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/timeA.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timeB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/timeB.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/votacao.txt" beforeDir="false" afterPath="$PROJECT_DIR$/votacao.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +93,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TelaDeConfirmacao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="view.TelaDeConfirmacao" />
+    <configuration name="TelaJogo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.TelaJogo" />
       <module name="camisetadez" />
       <extension name="coverage">
         <pattern>
@@ -92,11 +106,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TelaLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.TelaLogin" />
+      <module name="camisetadez" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Testes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="logic.Testes" />
+      <module name="camisetadez" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.HomeAB" />
+        <item itemvalue="Application.TelaJogo" />
+        <item itemvalue="Application.Testes" />
+        <item itemvalue="Application.TelaLogin" />
         <item itemvalue="Application.ExcluirJogador" />
-        <item itemvalue="Application.TelaDeConfirmacao" />
       </list>
     </recent_temporary>
   </component>

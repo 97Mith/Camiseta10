@@ -21,7 +21,6 @@ mike,4,MeioC
 Muriol,22,Zagueiro
 heleno,9,Atacante
 Math,1,Goleiro
-Valerik,2,MeioC
 Ze,11,Atacante
 Caio,24,Atacante
 Caganeira,44,Goleiro
@@ -29,3 +28,8 @@ furunculo,12,MeioC
 Together,22,Zagueiro
 Purga,2,MeioC
 Vera Verão,12,Atacante
+Corpo de selulite,2,Zagueiro
+caraDeCachorro,7,MeioC
+PedrinMatadorDePorco,23,MeioC
+Regulagem,33,Zagueiro
+Marcio,11,Atacante

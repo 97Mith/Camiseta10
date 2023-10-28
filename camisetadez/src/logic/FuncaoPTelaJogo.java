@@ -57,5 +57,43 @@ public class FuncaoPTelaJogo {
 
         return jogadorComMaisPontos.getNome();
     }
+    public static List<GolTrue> atualizarRanking(List<GolTrue> quemfezgols, List<GolTrue> ranking) {
+        List<GolTrue> novoRanking = new ArrayList<>();
+
+        for (int i = 0; i < quemfezgols.size(); i++) {
+            GolTrue jogadorQuemFezGols = quemfezgols.get(i);
+            boolean jogadorEncontrado = false;
+
+            for (int j = 0; j < ranking.size(); j++) {
+                GolTrue jogadorRanking = ranking.get(j);
+
+                if (jogadorQuemFezGols.getNome().equals(jogadorRanking.getNome())) {
+                    int gol = jogadorQuemFezGols.getGol();
+                    int golAnteriores = jogadorRanking.getGol();
+                    int total = gol + golAnteriores;
+                    GolTrue jogadorAtualizado = new GolTrue(jogadorQuemFezGols.getNome(), total);
+                    novoRanking.add(jogadorAtualizado);
+
+                    jogadorEncontrado = true;
+                    break;
+                }
+            }
+
+            if (!jogadorEncontrado) {
+                // Se o jogador não foi encontrado no ranking, adicione-o ao novoRanking
+                novoRanking.add(new GolTrue(jogadorQuemFezGols.getNome(), jogadorQuemFezGols.getGol()));
+            }
+        }
+
+        // Adicione os jogadores do ranking que não estão em quemfezgols
+        for (GolTrue jogadorRanking : ranking) {
+            if (!quemfezgols.stream().anyMatch(j -> j.getNome().equals(jogadorRanking.getNome()))) {
+                novoRanking.add(jogadorRanking);
+            }
+        }
+
+        return novoRanking;
+    }
+
 
 }

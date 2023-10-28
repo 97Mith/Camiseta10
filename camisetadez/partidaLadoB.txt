@@ -1,0 +1,7 @@
+Diguinho,1,0
+Ferrugem,24,0
+rodofredo,55,0
+Purga,2,0
+Corpo de selulite,2,0
+caraDeCachorro,7,3
+Regulagem,33,0

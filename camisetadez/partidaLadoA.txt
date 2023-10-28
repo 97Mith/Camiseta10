@@ -1,0 +1,7 @@
+Pingo,2,0
+Serginho,99,1
+Milton,4,0
+Mith,10,0
+Elizeu,14,0
+Sem sintoma,12,0
+Muriol,22,0

@@ -1,0 +1,7 @@
+Diguinho,1,Goleiro
+Ferrugem,24,Atacante
+rodofredo,55,Zagueiro
+Purga,2,MeioC
+Corpo de selulite,2,Zagueiro
+caraDeCachorro,7,MeioC
+Regulagem,33,Zagueiro
