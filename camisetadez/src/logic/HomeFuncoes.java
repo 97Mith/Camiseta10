@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFuncoes {
+
+
     public static boolean verificarJogadores(List<User> time, String texto){
         //boolean tudoCerto = false;
         int posicaoZ = 0; int posicaoM = 0; int posicaoA = 0;

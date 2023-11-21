@@ -17,7 +17,6 @@ Ferrugem,2233
 polenta,12345
 peido de solda,1234
 rodofredo,555
-mike,321
 Muriol,kiko
 heleno,123456
 Math,8545
@@ -33,3 +32,6 @@ caraDeCachorro,2233
 PedrinMatadorDePorco,112233
 Regulagem,123
 Marcio,2
+Fabio,99122210
+Teste,8545
+Teste2,123456

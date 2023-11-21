@@ -17,7 +17,6 @@ Ferrugem,24,Atacante
 polenta,24,Goleiro
 peido de solda,2,Zagueiro
 rodofredo,55,Zagueiro
-mike,4,MeioC
 Muriol,22,Zagueiro
 heleno,9,Atacante
 Math,1,Goleiro
@@ -33,3 +32,6 @@ caraDeCachorro,7,MeioC
 PedrinMatadorDePorco,23,MeioC
 Regulagem,33,Zagueiro
 Marcio,11,Atacante
+Fabio,10,Atacante
+Teste,12,Zagueiro
+Teste2,11,Atacante

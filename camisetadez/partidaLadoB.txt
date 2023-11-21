@@ -1,7 +1,7 @@
-Diguinho,1,0
-Ferrugem,24,0
-rodofredo,55,0
-Purga,2,0
-Corpo de selulite,2,0
-caraDeCachorro,7,3
+Mith,10,0
+Muriol,22,0
+heleno,9,0
+Math,1,0
+Ze,11,0
+PedrinMatadorDePorco,23,1
 Regulagem,33,0

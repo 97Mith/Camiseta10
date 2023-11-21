@@ -1,6 +1,8 @@
 package view;
 
+import date.GolTrue;
 import date.User;
+import logic.FuncaoPTelaJogo;
 import logic.HomeFuncoes;
 import java.awt.EventQueue;
 import java.awt.FlowLayout;
@@ -21,6 +23,7 @@ import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
 
@@ -274,11 +277,11 @@ public class HomeAB extends JFrame {
         btnJogoRapido.setFont(new Font("Tahoma", Font.BOLD, 14));
         btnJogoRapido.setBackground(new Color(0, 128, 0));
 
-        JButton btnMarcarJogo = new JButton("Gerar times");
-        btnMarcarJogo.setEnabled(false);
-        btnMarcarJogo.setForeground(Color.WHITE);
-        btnMarcarJogo.setFont(new Font("Tahoma", Font.BOLD, 14));
-        btnMarcarJogo.setBackground(new Color(0, 128, 0));
+        JButton btnRank = new JButton("Gerar times");
+        btnRank.setEnabled(false);
+        btnRank.setForeground(Color.WHITE);
+        btnRank.setFont(new Font("Tahoma", Font.BOLD, 14));
+        btnRank.setBackground(new Color(0, 128, 0));
 
         JButton btnVerListaDe = new JButton("Ver Ranking");
         btnVerListaDe.setForeground(Color.WHITE);
@@ -327,7 +330,7 @@ public class HomeAB extends JFrame {
                                         .addGroup(gl_panel_2.createSequentialGroup()
                                                 .addGroup(gl_panel_2.createParallelGroup(Alignment.TRAILING)
                                                         .addComponent(btnVerListaDe, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
-                                                        .addComponent(btnMarcarJogo, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
+                                                        .addComponent(btnRank, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
                                                         .addComponent(btnJogoRapido, GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE))
                                                 .addGap(10))
                                         .addGroup(gl_panel_2.createSequentialGroup()
@@ -348,7 +351,7 @@ public class HomeAB extends JFrame {
                                 .addGap(42)
                                 .addComponent(btnJogoRapido, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
                                 .addGap(33)
-                                .addComponent(btnMarcarJogo, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnRank, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
                                 .addGap(33)
                                 .addComponent(btnVerListaDe, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
                                 .addGap(34)
@@ -518,25 +521,6 @@ public class HomeAB extends JFrame {
                     telaJogo.setVisible(true);
                 }
             }
-        });btnMarcarJogo.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                boolean acesso = FuncoesArquivo.repetidosAB(caminhoListaTimeA, caminhoListaTimeB);
-                int numeroJogadores = caminhoListaTimeA.size() - caminhoListaTimeB.size();
-                //comentario commit
-                if(!ir){
-                    JOptionPane.showMessageDialog(null, "Atualize as tabelas!", "Nota", JOptionPane.WARNING_MESSAGE);
-                } else if (caminhoListaTimeA.size() < 6 || caminhoListaTimeB.size() < 6) {
-                    JOptionPane.showMessageDialog(null, "Minimo 7 jogadores por time!", "Erro", JOptionPane.WARNING_MESSAGE);
-                } else if (caminhoListaTimeA.size() > 10 || caminhoListaTimeB.size() > 10) {
-                    JOptionPane.showMessageDialog(null, "Máximo 10 jogadores por time!", "Limite jogadores atingido", JOptionPane.WARNING_MESSAGE);
-                } else if (numeroJogadores != -1 && numeroJogadores != 0 && numeroJogadores != 1){
-                    System.out.println(numeroJogadores);
-                    JOptionPane.showMessageDialog(null, "Cada time deve ter numeros iguais de jogadores.\n (diferença de 1 jogador é permitido)", "Jogo justo", JOptionPane.WARNING_MESSAGE);
-                } else if(acesso){
-                    JOptionPane.showMessageDialog(null, "Boa!", "Boa", JOptionPane.INFORMATION_MESSAGE);
-                }
-            }
         });
         btnNovoJogador.addActionListener(new ActionListener() {
             @Override
@@ -552,6 +536,16 @@ public class HomeAB extends JFrame {
                 List<User> lista = FuncoesArquivo.carregarJogadores("posicao.txt");
                 TelaDeConfirmacao telaDeConfirmacao = new TelaDeConfirmacao(btnAtualizar);
                 telaDeConfirmacao.setVisible(true);
+            }
+        });
+        btnVerListaDe.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                List<GolTrue> ranking = FuncaoPTelaJogo.lerVotos("ranking.txt");
+                List<GolTrue> rankingParaExibir = FuncoesArquivo.criarRanking(ranking);
+                TelaLista telaLista = new TelaLista(rankingParaExibir);
+                telaLista.setVisible(true);
+
             }
         });
 

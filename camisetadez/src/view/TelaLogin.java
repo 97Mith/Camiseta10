@@ -1,6 +1,7 @@
 package view;
 
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
@@ -8,7 +9,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -39,12 +42,24 @@ public class TelaLogin extends JFrame {
      * Create the frame.
      */
     public TelaLogin() {
+        //carregar imagem
+        JLabel background = new JLabel();
+        try {
+            BufferedImage img = ImageIO.read(new File("imgTelaLogin.jpg"));
+            ImageIcon icon = new ImageIcon(img);
+
+            background.setIcon(icon);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         setResizable(false);
         setTitle("Entrar - Login");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 555, 570);
         contentPane = new JPanel();
-        contentPane.setBackground(new Color(0, 64, 0));
+        contentPane.setBackground(new Color(0,64,0));
+
         contentPane.setBorder(new LineBorder(new Color(255, 255, 255), 6));
         setLocationRelativeTo(null);
         setContentPane(contentPane);

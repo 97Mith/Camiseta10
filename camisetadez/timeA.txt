@@ -1,7 +1,7 @@
 Pingo,2,Zagueiro
-Serginho,99,Goleiro
+Barriga de Cadela,1,Goleiro
+Matheus,7,MeioC
+Paulista,10,Atacante
+Jorge,3,Zagueiro
+Lulu,10,Atacante
 Milton,4,MeioC
-Mith,10,Atacante
-Elizeu,14,Zagueiro
-Sem sintoma,12,MeioC
-Muriol,22,Zagueiro

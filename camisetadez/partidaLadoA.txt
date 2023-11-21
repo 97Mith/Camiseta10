@@ -1,7 +1,7 @@
-Pingo,2,0
-Serginho,99,1
-Milton,4,0
-Mith,10,0
-Elizeu,14,0
-Sem sintoma,12,0
-Muriol,22,0
+Pingo,2,1
+Barriga de Cadela,1,0
+Matheus,7,0
+Paulista,10,0
+Jorge,3,0
+Lulu,10,0
+Milton,4,1

@@ -1,5 +1,6 @@
 package logic;
 
+import date.GolTrue;
 import date.User;
 
 import javax.swing.*;
@@ -236,6 +237,13 @@ public class FuncoesArquivo {
             e.printStackTrace();
         }
 
+    }
+
+    public static List<GolTrue> criarRanking(List<GolTrue> jogadores) {
+
+        Collections.sort(jogadores, Comparator.comparingInt(GolTrue::getGol).reversed());
+
+        return jogadores;
     }
 }
 
