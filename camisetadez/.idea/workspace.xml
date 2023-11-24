@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cdd283f-3835-46cb-8ef7-38cb1389cf7c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/view/TelaLista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/golMaisBonito.txt" beforeDir="false" afterPath="$PROJECT_DIR$/golMaisBonito.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jogadores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/jogadores.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partidaLadoA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/partidaLadoA.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partidaLadoB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/partidaLadoB.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posicao.txt" beforeDir="false" afterPath="$PROJECT_DIR$/posicao.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ranking.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ranking.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/FuncoesArquivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/FuncoesArquivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/HomeFuncoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/HomeFuncoes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/HomeAB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/HomeAB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/TelaLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/TelaLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/timeA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/timeA.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/timeB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/timeB.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/votacao.txt" beforeDir="false" afterPath="$PROJECT_DIR$/votacao.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
